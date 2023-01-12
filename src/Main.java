@@ -6,19 +6,16 @@ public class Main {
         Author theFirstWriter = new Author("Людмила", "Петрановская");
         Book theFirstBook = new Book("Большая книга про вас и вашего ребенка", theFirstWriter, 2017);
 
-        // для проверки корректности выводим на экран
-        System.out.println("Год публикации первой книги: " + theFirstBook.getYearOfPublication());
         theFirstBook.setYearOfPublication(2018);
-        // для проверки корректности выводим на экран
-        System.out.println("Год публикации первой книги: " + theFirstBook.getYearOfPublication());
-        System.out.println("Название первой книги: " + theFirstBook.getNameBook());
-        System.out.println("Автор первой книги: " + theFirstBook.getWriter().showYourName());
+        System.out.println(theFirstBook);
 
         Author theSecondWriter = new Author("Мария", "Кардакова");
         Book theSecondBook = new Book("Сначала суп, потом десерт", theSecondWriter, 2020);
-        // для проверки корректности выводим на экран
-        System.out.println("Год публикации второй книги: " + theSecondBook.getYearOfPublication());
-        System.out.println("Название второй книги: " + theSecondBook.getNameBook());
-        System.out.println("Автор второй книги: " + theSecondBook.getWriter().showYourName());
+        System.out.println(theSecondBook);
+        System.out.println(theSecondBook.equals(theFirstBook));
+        Author theThirdWriter = new Author("Людмила", "Петрановская");
+        Book theThirdBook = new Book("Большая книга про вас и вашего ребенка", theThirdWriter, 2022);
+        System.out.println(theFirstBook.equals(theThirdBook));
+        System.out.println(theFirstWriter.equals(theThirdWriter));
     }
 }
